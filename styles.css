@@ -1,0 +1,22 @@
+.open{
+    color: rgb(243, 243, 241);
+    font-weight: bold;
+}
+.closed{
+    color: antiquewhite;
+    text-decoration: line-through;
+}
+
+.sold-out{
+    color: red;
+    text-decoration: line-through;
+}
+
+body {
+  background-image:
+    url("assets/taco-spin.gif"),
+    linear-gradient(to right, #49e4ff, #ff4ce7);
+  background-size: 300px auto, cover;
+  background-position: center top, center;
+  min-height: calc(100vh - 4rem);
+}
