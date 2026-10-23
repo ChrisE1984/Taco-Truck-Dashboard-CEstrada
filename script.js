@@ -22,6 +22,7 @@ function renderMenu() {
   menuList.replaceChildren();
   menu.forEach(function (item) {
     const listItem = document.createElement("li");
+    listItem.classList.add("text-shadow-lg/50");
     if (item.soldOut) {
       listItem.classList.add("sold-out");
     }

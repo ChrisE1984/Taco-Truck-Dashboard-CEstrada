@@ -7,33 +7,33 @@
     <link rel="stylesheet" href="styles.css" />
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
   </head>
-  <body class="m-8 text-white font-bold [background-repeat:no-repeat_space,no-repeat] md:[background-repeat:space,no-repeat]">
+  <body class="m-8 text-white font-bold text-shadow-lg/50 [background-repeat:no-repeat_space,no-repeat] md:[background-repeat:space,no-repeat]">
     <header>
-      <h1 class="inline-block w-fit max-w-full text-3xl rounded-md border px-3 py-1 bg-linear-to-r from-[#49e4ff] to-[#ff4ce7]">Isaiah's Taco Truck</h1>
-      <p id="status" class="mb-4 closed">Closed</p>
-      <button id="open-button" class="border px-3 py-1 rounded-md bg-linear-to-r from-[#49e4ff] to-[#ff4ce7]">Open Truck</button>
+      <h1 class="inline-block w-fit max-w-full text-3xl rounded-md border px-3 py-1 bg-linear-to-r from-[#49e4ff] to-[#ff4ce7] ">Isaiah's Taco Truck</h1>
+      <p id="status" class="mb-4 closed ">Closed</p>
+      <button id="open-button" class="border px-3 py-1 rounded-md bg-linear-to-r from-[#49e4ff] to-[#ff4ce7] ">Open Truck</button>
       <p id="total-sold" class="my-4">Total sold: 0</p>
     </header>
     <main>
       <div class="my-4">
-        <h2 class="mb-2 text-xl">Today's location</h2>
-        <label for="location-input" class="block mb-1">Location</label>
+        <h2 class="mb-2 text-xl  ">Today's location</h2>
+        <label for="location-input" class="block mb-1 ">Location</label>
         <input id="location-input" type="text" class="border p-2" />
-        <button id="set-location-button" type="button" class="border px-3 py-1 rounded-md bg-linear-to-r from-[#49e4ff] to-[#ff4ce7]">Set</button>
+        <button id="set-location-button" type="button" class="border px-3 py-1 rounded-md bg-linear-to-r from-[#49e4ff] to-[#ff4ce7] ">Set</button>
         <p id="location-display"></p>
       </div>
       <div class="my-4">
-        <h2 class="mb-2 text-xl">Menu</h2>
+        <h2 class="mb-2 text-xl ">Menu</h2>
         <form id="menu-form" class="flex flex-col items-start gap-2">
           <div>
-            <label for="item-name" class="block mb-1">Item name</label>
+            <label for="item-name" class="block mb-1 ">Item name</label>
             <input id="item-name"  class="border p-2" />
           </div>
           <div>
-            <label for="item-description" class="block mb-1">Description</label>
+            <label for="item-description" class="block mb-1 ">Description</label>
             <textarea id="item-description" class="border p-2"></textarea>
           </div>
-          <button id="add-button" type="submit" class="border px-3 py-1 rounded-md bg-linear-to-r from-[#49e4ff] to-[#ff4ce7]">Add</button>
+          <button id="add-button" type="submit" class="border px-3 py-1 rounded-md bg-linear-to-r from-[#49e4ff] to-[#ff4ce7] ">Add</button>
         </form>
       </div>
       <ul id="menu-list" class="list-disc pl-5"></ul>

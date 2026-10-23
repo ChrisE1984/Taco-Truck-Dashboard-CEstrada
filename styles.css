@@ -19,4 +19,5 @@ body {
   background-size: 300px auto, cover;
   background-position: center top, center;
   min-height: calc(100vh - 4rem);
+  
 }
