@@ -1,4 +1,4 @@
-#Isaiah's Taco Truck (is the best).
+# Isaiah's Taco Truck (is the best).
 - Chris Estrada
 - Date - 10/23/2026
 - Assignment Name - Taco Truck Dashboard
