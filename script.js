@@ -54,10 +54,17 @@ function setLocation() {
   const location = locationInput.value.trim();
   if (location) {
     locationDisplay.textContent = "Today's location: " + location;
+    locationInput.value = "";
   }
 }
 
 setLocationButton.addEventListener("click", setLocation);
+locationInput.addEventListener("keydown", function (event) {
+  if (event.key === "Enter") {
+    setLocation();
+   
+  }
+});
 
 function addMenuItem(event) {
   event.preventDefault();
@@ -78,6 +85,11 @@ function addMenuItem(event) {
 }
 
 menuForm.addEventListener("submit", addMenuItem);
+itemDescriptionInput.addEventListener("keydown", function (event) {
+  if (event.key === "Enter") {
+    addMenuItem(event);
+  }
+});
 
 // ----- run at load -----
 

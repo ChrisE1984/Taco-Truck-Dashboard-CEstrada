@@ -1,14 +1,14 @@
 .open{
-    color: rgb(243, 243, 241);
+    color: coral;
     font-weight: bold;
 }
 .closed{
-    color: antiquewhite;
+    color: rgb(243, 93, 198);
     text-decoration: line-through;
 }
 
 .sold-out{
-    color: red;
+    color: rgb(243, 93, 198);
     text-decoration: line-through;
 }
 
