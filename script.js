@@ -15,6 +15,7 @@ const menuList = document.getElementById("menu-list");
 const locationInput = document.getElementById("location-input");
 const setLocationButton = document.getElementById("set-location-button");
 const locationDisplay = document.getElementById("location-display");
+const closeButton = document.getElementById("close-button")
 
 // ----- functions -----
 
@@ -27,6 +28,26 @@ function renderMenu() {
       listItem.classList.add("sold-out");
     }
     listItem.append(item.name);
+    const saleButton = document.createElement("button");
+    saleButton.type = "button";
+    saleButton.textContent = "Sold";
+    saleButton.classList.add(
+      "border",
+      "px-2",
+      "py-1",
+      "rounded-md",
+      "ml-2",
+      "bg-linear-to-r",
+      "from-[#49e4ff]",
+      "to-[#ff4ce7]"
+    );
+    saleButton.addEventListener("click", function (event) {
+      event.stopPropagation();
+      totalSold += 1;
+      totalSoldLine.textContent = "Total sold: " + totalSold;
+    });
+    listItem.append(saleButton);
+
     if (!item.soldOut) {
       listItem.addEventListener("click", function () {
         item.soldOut = true;
@@ -49,6 +70,14 @@ openButton.addEventListener("click", function () {
   statusLine.textContent = "Open";
   statusLine.classList.remove("closed");
   statusLine.classList.add("open");
+
+});
+
+closeButton.addEventListener("click", function () {
+  statusLine.textContent = "Close";
+  statusLine.classList.add("closed");
+  statusLine.classList.remove("open");
+
 });
 
 function setLocation() {
@@ -79,8 +108,6 @@ function addMenuItem(event) {
     name: name,
     description: description,
   });
-  totalSold = totalSold + 1;
-  totalSoldLine.textContent = "Total sold: " + totalSold;
   renderMenu();
   menuForm.reset();
 }
